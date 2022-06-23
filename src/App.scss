@@ -42,4 +42,7 @@ body {
   flex-grow: 1;
   border: 1px solid #90E149;
   background-color: $light;
+  @media (max-width: 1039px) {
+    border: none;
+  }
 }
