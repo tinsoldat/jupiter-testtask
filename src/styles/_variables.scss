@@ -1,0 +1,22 @@
+$dark: #28293E;
+$light: #FDF0E9;
+$gray: #707070;
+$brown: #391400;
+$secondary: #B1B1B9;
+$accent: #16CD53;
+
+@mixin regular {
+  font-weight: 400;
+}
+
+@mixin bold {
+  font-weight: 700;
+}
+
+@mixin x-bold {
+  font-weight: 800;
+}
+
+@mixin black {
+  font-weight: 900;
+}

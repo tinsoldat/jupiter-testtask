@@ -1,56 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import './App.scss';
+import { ReactComponent as Logo } from './assets/logo.svg';
+import { Gallery } from './features/gallery/Gallery';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
+      <header className="header">
+        <div className="container">
+          <div className="header__items">
+            <div className="header__logo">
+              <div className="header__logo-image"><Logo /></div>
+              <div className="header__logo-text">Agency</div>
+            </div>
+            <nav className="header__navbar navbar">
+              <a href="/#" className="navbar__link">About</a>
+              <a href="/#" className="navbar__link">Services</a>
+              <a href="/#" className="navbar__link">Pricing</a>
+              <a href="/#" className="navbar__link">Blog</a>
+            </nav>
+            <button className="header__contact">contact</button>
+          </div>
+        </div>
       </header>
+      <section className="hero">
+        <div className="container">
+          <div className="hero__items">
+            <div className="hero__title">Portfolio</div>
+            <div className="hero__desc">
+              Agency provides a full service range including&nbsp;
+              technical skills, design, business understanding.
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="content">
+        <div className="container">
+          <Gallery />
+        </div>
+      </div>
     </div>
   );
 }

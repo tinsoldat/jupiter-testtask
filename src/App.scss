@@ -1,0 +1,45 @@
+@use './styles/variables' as *;
+@use './styles/reset';
+@use './styles/header';
+@use './styles/hero';
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,800;0,900;1,800&display=swap');
+
+html,
+body,
+#root,
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: white;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1570px;
+  height: 100%;
+  padding: 0 135px;
+
+  @media (max-width: 1039px) {
+    padding: 0 23px;
+  }
+
+  margin: 0 auto;
+}
+
+.content {
+  flex-grow: 1;
+  border: 1px solid #90E149;
+  background-color: $light;
+}

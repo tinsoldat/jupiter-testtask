@@ -1,0 +1,64 @@
+@use '../../styles/variables' as *;
+
+.filter {
+  font-size: 16px;
+  color: transparentize($brown, $amount: .36);
+  display: flex;
+  justify-content: center;
+
+  &__buttons {
+    width: 570px;
+    margin-top: 80px;
+    margin-bottom: 75px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__select {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    appearance: none;
+    margin-top: 32px;
+    margin-bottom: 48px;
+    width: 330px;
+    height: 48px;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #F3D1BF;
+    display: none;
+    &-text {
+      pointer-events: none;
+      margin-left: 16px;
+    }
+    &-arrow {
+      margin-right: 16px;
+    }
+    &-native {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 1039px) {
+    &__buttons {
+      display: none;
+    }
+    &__select {
+      display: flex;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+
+    &[data-selected] {
+      color: #16CD53;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use './variables' as *;
+
+.hero {
+  flex-shrink: 0;
+  height: 320px;
+  background-color: $dark;
+
+  &__items {
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    @include x-bold;
+    font-size: 72px
+  }
+
+  &__desc {
+    @include regular;
+    max-width: 570px;
+    text-align: center;
+    color: $secondary;
+    font-size: 16px;
+    margin-top: 35px;
+  }
+}
