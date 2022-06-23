@@ -39,6 +39,7 @@
   }
 
   &__contact {
+    cursor: pointer;
     @include black;
     text-transform: uppercase;
     width: 138px;
